@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ${ require('raw-loader!./meta.html')}
+    <title>search page</title>
+</head>
+<body>
+    <!-- 
+        使用raw-loader可以将html和js文件内联到文件中，由于html-webpack-plugin默认的模板引擎是ejs，所以这里可以直接使用${}形式引入其他模版文件。
+     -->
+    <script type="text/javascript">
+        ${ require('raw-loader!babel-loader!../../node_modules/lib-flexible/flexible.js') }    
+    </script>
+    <div id="root"></div>
+</body>
+</html>
